@@ -31,7 +31,7 @@ sql_scommittee = """insert into scommittee(idx,sc_name,cg_num,cg_name,sc_totalcn
 sql_bcommittee = """insert into bcommittee(title,cg_num,cg_name,attend)
                    values (%s, %s, %s, %s)"""
 # 국회관련 변수
-congress_num = 298
+congress_num = 10
 api_key = "TeInuDkG7xTP8mVZlMrmZ4Z7btqFpzoiM6L4FnY5S6oxkAAtxXszqbUOmZ2g6V6j34%2FoxhD%2B8DFPco85O%2B2YSw%3D%3D"
 memberList = []
 #
@@ -953,12 +953,10 @@ if __name__=="__main__":
 else:
     print("module 실행")
     get_congressinfo()
-    db_insertcongress()
-    # 회의정보부여하기
-    for member in memberList:
-        sclist = member.myCommitteeList.split(',')
-        for sc in sclist:
-            member.attendCommitteeList.append(StandingCommittee(sc))
-        member.attendCommitteeList.append(PlenaryCommittee("본회의"))
-
-
+    #db_insertcongress()
+    ## 회의정보부여하기
+    #for member in memberList:
+#        sclist = member.myCommitteeList.split(',')
+#        for sc in sclist:
+#            member.attendCommitteeList.append(StandingCommittee(sc))
+#        member.attendCommitteeList.append(PlenaryCommittee("본회의"))
