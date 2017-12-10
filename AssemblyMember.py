@@ -31,7 +31,7 @@ sql_scommittee = """insert into scommittee(idx,sc_name,cg_num,cg_name,sc_totalcn
 sql_bcommittee = """insert into bcommittee(title,cg_num,cg_name,attend)
                    values (%s, %s, %s, %s)"""
 # 국회관련 변수
-congress_num = 10
+congress_num = 298
 api_key = "TeInuDkG7xTP8mVZlMrmZ4Z7btqFpzoiM6L4FnY5S6oxkAAtxXszqbUOmZ2g6V6j34%2FoxhD%2B8DFPco85O%2B2YSw%3D%3D"
 memberList = []
 #
