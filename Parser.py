@@ -6,23 +6,23 @@
     Description : Parsing modules descript this file
 """
 import AssemblyMember
+import requests
+from bs4 import BeautifulSoup
 import time
+
 class Parsing:
     def __init__(self, lastParsingData, status):
         self.lastParsingData = lastParsingData
         self.status = status
         self.logList = []
-        self.memberList = []
+        self.memberList = AssemblyMember.memberList
 
 
-class AttendParsing(Parsing):
-    def __init__(self, lastParsingData, status):
-        Parsing.__init__(self, lastParsingData, status)
-        self.committeeList = [] # 상임위원회
-        self.memAttendList = [] # 본회의
+
 
 
 if __name__ == "__main__":
     now = time.localtime()
     s = "%04d-%02d-%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
-    print(len(AssemblyMember.memberList))
+    #parser = AttendParsing(s, 0)
+    #parser.extractScmtAttend()
